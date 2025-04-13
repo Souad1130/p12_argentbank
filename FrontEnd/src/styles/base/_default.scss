@@ -1,0 +1,57 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/************/
+/* GENERAL */
+/***********/
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus-visible {
+    box-shadow: 0 0 0 2px variables.$primary-color;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+// Complement to the sr-only already provided by font-awesome
+.sr-only {
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+
+.bg-dark {
+    background-color: variables.$bg-dark;
+}
+
+.bg-white {
+    background-color: variables.$white;
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/********************/
+/* TYPOGRAPHY STYLE */
+/********************/
+
+body {
+    font-family: variables.$font-default;
+    @include mixins.font-size(16px);
+    font-weight: 500;
+    color: variables.$secondary-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: variables.$black;
+    text-decoration: none;
+
+    &:hover {
+        color: variables.$primary-color;
+    }
+}

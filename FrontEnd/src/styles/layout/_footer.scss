@@ -1,0 +1,18 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/*****************/
+/* FOOTER LAYOUT */
+/*****************/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid variables.$footer-border;
+    padding: 2rem 0 1.5rem;
+
+    &__copyright {
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,27 @@
+/**********/
+/* FONTS */
+/*********/
+
+$font-default: Avenir, Helvetica, Arial, sans-serif;
+
+/***********/
+/* COLORS */
+/**********/
+
+$primary-color: #00bc77;
+$secondary-color: #2c3e50;
+$bg-dark: #12002b;
+$footer-border: #ccc;
+$white: #ffffff;
+$black: #000000;
+$title: #222;
+
+/***************/
+/* RESPONSIVE */
+/**************/
+
+// 1.Breakpoints map for responsive
+$breakpoints: (
+    medium: 920px,
+    small: 720px
+);

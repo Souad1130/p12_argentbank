@@ -1,0 +1,32 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/************************/
+/* ERROR 404 PAGE STYLE */
+/************************/
+
+.error-404 {
+    width: 75%;
+    margin: 0 auto;
+    padding: 158px 90px 0 90px;
+    text-align: center;
+
+    &__title {
+        font-size: 3.2rem;
+        color: variables.$white;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 50px 0 70px 0;
+    }
+
+    &__link {
+        color: variables.$primary-color;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+            color: variables.$white;
+        }
+    }
+}
