@@ -12,9 +12,9 @@ const Header = () => {
                 <h1 className="sr-only">Argent Bank</h1>
             </Link>
             <nav className="header__nav">
-                <Link to={user.signin ? "/profile" : "/login"} className="header__link-nav">
+                <Link to={"/login"} className="header__link-nav">
                     <i className="fa fa-user-circle header__icon"></i>
-                    { user.signin ? `${user.firstName}` : "Sign In" }
+                   
                 </Link>
                 
                     <Link to="/" className="header__link-nav">
