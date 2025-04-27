@@ -1,4 +1,7 @@
-
+/**
+ * The Footer component returns JSX element.
+ * @returns {JSX.Element}
+ */
 const Footer = () => {
     return (
         <footer className="footer">

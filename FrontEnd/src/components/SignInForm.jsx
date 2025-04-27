@@ -3,7 +3,7 @@ import { userSignIn, getProfil } from "../services/fetchData";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setAccessToken, signIn } from "../redux/userSlice";
-import Button from "../components/Button";
+import Button from "./Button";
 
 /**
 * Component for Sign In form
