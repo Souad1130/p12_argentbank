@@ -3,15 +3,14 @@ import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { signOut } from "../redux/userSlice";
 
-/**
- * The Header component returns JSX element.
- * @returns {JSX.Element}
- */
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+
 const Header = () => {
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
 
-    // Clean local storage and dispatch signOut action for clear user store
     const userSignOut = () => {
         localStorage.clear();
         dispatch(signOut(user));
@@ -25,15 +24,15 @@ const Header = () => {
             </Link>
             <nav className="header__nav">
                 <Link to={user.signin ? "/profile" : "/login"} className="header__link-nav">
-                    <i className="fa fa-user-circle header__icon"></i>
+                    <FontAwesomeIcon icon={faUserCircle} style={{ marginRight: "8px" }} />
                     { user.signin ? `${user.firstName}` : "Sign In" }
                 </Link>
-                { user.signin ? (
+                { user.signin && (
                     <Link to="/" className="header__link-nav" onClick={userSignOut}>
-                        <i className="fa fa-sign-out"></i>
-                            Sign Out
+                        <FontAwesomeIcon icon={faSignOutAlt} style={{ marginRight: "8px" }} />
+                        Sign Out
                     </Link>
-                ) : "" }
+                )}
             </nav>
         </header>
     );

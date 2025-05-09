@@ -8,6 +8,7 @@ import Button from "../components/Button";
 import AccountCard from "../components/AccountCard";
 import ErrorConnection from "../components/ErrorConnection";
 
+
 /**
 * Dashboard page
 
@@ -19,8 +20,8 @@ const Dashboard = () => {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
     const token = user.accessToken;
-    const transactions = accounts.find(account => account.userId === user.id)?.transactions || [];
-
+    const transactions = accounts;
+console.log(transactions)
     /**
     * Handles editing user's first and last name.
     
