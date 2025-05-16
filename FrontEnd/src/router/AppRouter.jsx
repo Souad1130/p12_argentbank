@@ -5,7 +5,8 @@ import Dashboard from "../pages/Dashboard";
 import Error404 from "../pages/Error404";
 
 /**
-* AppRouter component manage routing in app, that renders different routes and corresponding components.
+* Le composant AppRouter gère la navigation dans l'application,
+ en affichant les différentes routes et les composants correspondants.
 * @component
 * @returns {JSX.Element}
 */

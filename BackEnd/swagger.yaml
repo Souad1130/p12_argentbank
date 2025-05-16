@@ -116,61 +116,6 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
-  /user/accounts:
-    get:
-      security:
-        - Bearer: []
-      tags:
-        - Account Module
-      summary: All user's accounts
-      description: Getting all user's accounts
-      parameters:
-        - in: header
-          name: Authorization
-          description: Attach Bearer JWT token
-          required: true
-          type: string
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: User accounts retrieved successfully
-          schema:
-            $ref: '#/definitions/responseAccounts'
-        '400':
-          description: Accounts not found
-        '500':
-          description: Internal Server Error
-  /user/account/{accountId}:
-    get:
-      security:
-        - Bearer: []
-      tags:
-      - Account Module
-      summary: Selected user's account
-      description: Getting user's account by Id
-      parameters:
-        - in: header
-          name: Authorization
-          description: Attach Bearer JWT token
-          type: string
-          required: true
-        - in: path
-          name: accountId
-          description: User's account ID
-          type: integer
-          required: true
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: Account retrieved successfully
-          schema:
-            $ref: '#/definitions/responseAccountById'
-        '400':
-          description: Account not found
-        '500':
-          description: Internal Server Error
   /user/account/{accountId}/transactions/{month}:
     get:
       security:

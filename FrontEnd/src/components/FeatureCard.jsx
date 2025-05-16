@@ -5,7 +5,7 @@ import securityIcon from "../assets/icons/icon-security.png";
 
 
 /**
- * Component displaying Feature Card
+ *  Feature Card pour la page d'accueil
  
  */
 const FeatureCard = ({ id, title, txt }) => {

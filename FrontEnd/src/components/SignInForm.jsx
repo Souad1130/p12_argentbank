@@ -6,7 +6,7 @@ import { setAccessToken, signIn } from "../redux/userSlice";
 import Button from "./Button";
 
 /**
-* Component for Sign In form
+* Component de Sign In form
 * @component
 * @returns {JSX.Element}
 */
@@ -18,7 +18,8 @@ const SignInForm = () => {
     const navigate = useNavigate();
 
     /**
-    * Handles the form submission for sign in form.
+    * Gère la soumission du formulaire de connexion.
+
     *
     * @param {Event} e - The form submission event.
     */

@@ -1,7 +1,7 @@
 import { features } from "../data/features";
 import FeatureCard from "../components/FeatureCard";
 import HeroBanner from "../components/HeroBanner";
-
+//j'ai appeler le banner et map boucle pour afficher les card
 const Home = () => {
     return (
         <div className="home">

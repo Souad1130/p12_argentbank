@@ -1,10 +1,7 @@
 import Button from "./Button";
 
 
-/**
- * Component displaying Account card
-
- */
+//les card de la page profile
 const AccountCard = ({ title, amount, desc }) => {
     return (
         <div className="account-item">

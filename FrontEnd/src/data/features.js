@@ -1,4 +1,4 @@
-// Mock Data for features cards on Homepage
+// les donner que j'ai afficher dans les cart on bas de la page home
 export const features = [
     {
         "id": 0,

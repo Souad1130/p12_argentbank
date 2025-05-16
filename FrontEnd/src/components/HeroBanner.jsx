@@ -1,5 +1,5 @@
 /**
-* Component for Hero Banner
+* Component de Hero Banner
 
 */
 const HeroBanner = () => {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 /**
-* Component for Error Connection
+* Component de Error Connection
 */
 const ErrorConnection = () => {
     return (

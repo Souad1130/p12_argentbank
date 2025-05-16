@@ -4,7 +4,8 @@ import { persistStore, persistReducer } from "redux-persist";
 import sessionStorage from "redux-persist/lib/storage/session";
 import thunk from "redux-thunk";
 
-// Configuration for the persistence of the user slice state
+// Configuration de la persistance de l’état du user slice
+
 const persistConfig = {
     key: "user",
     storage: sessionStorage
@@ -12,12 +13,12 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, userSlice.reducer);
 
-// Configure the store with the persisted user slice and the thunk middleware
+// Configure le store avec le user slice persistant 
 const store = configureStore({
     reducer: {
         user: persistedReducer
     },
-    // To manage non-serializable actions like asynchronous functions
+    // Pour gérer les actions non sérialisables comme les fonctions asynchrones
     middleware: [thunk]
 });
 

@@ -23,7 +23,8 @@ const Dashboard = () => {
     const transactions = accounts;
 console.log(transactions)
     /**
-    * Handles editing user's first and last name.
+    * // Gère la modification du prénom et du nom de l'utilisateur.
+
     
     */
     const editUserName = (e) => {
@@ -32,7 +33,7 @@ console.log(transactions)
     };
 
     /**
-    * Handles saving changes user's first and last name.
+    *Gère la sauvegarde des modifications du prénom et du nom de l'utilisateur.
 
     */
     const saveEditName = async (e) => {
@@ -48,7 +49,7 @@ console.log(transactions)
     };
 
     /**
-    * Handles canceling changes user's first and last name.
+    * Gère l'annulation des modifications du prénom et du nom de l'utilisateur.
     
     */
     const cancelEditName = (e) => {
@@ -57,6 +58,7 @@ console.log(transactions)
             setEditName(false);
         }
     };
+    //on a appeller les components button, AccountCard, ErrorConnection
 
     return (
         <>

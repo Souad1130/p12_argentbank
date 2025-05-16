@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Init all values of state
+// declare les state de mon stor
 const initialState = {
     id: null,
     firstName: null,
@@ -9,26 +9,28 @@ const initialState = {
     signin: false,
     accessToken: null
 };
-
-// Redux slice that represents the user state. Contains initial user state, actions, reducers to update the state with dispatch actions.
+//la confeguration de userslice j'ai mis les reducer 
 const userSlice = createSlice({
     name: "user",
     initialState,
     reducers: {
+        //pour actualiser le acces-stoken dans mon stor 
         setAccessToken: (state, action) => {
-            // { type: "user/setAcessToken", payload: string}
+           
             state.accessToken = action.payload;
         },
+// de charger les donner d'utilisateur dans le stor 
         signIn: (state, action) => {
-            // { type: "user/signIn", payload: {}}
+          
             state.id = action.payload.id;
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
             state.email = action.payload.email;
             state.signin = true;
         },
+        // vider mon stor
         signOut: (state) => {
-            // { type: "user/signOut"}
+           
             state.id = null;
             state.firstName = null;
             state.lastName = null;
@@ -36,8 +38,9 @@ const userSlice = createSlice({
             state.signin = false;
             state.accessToken = null;
         },
+//chenger le nom d'utilisateur
         editUser: (state, action) => {
-            // { type: "user/editUser", payload: {}}
+            
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
         }

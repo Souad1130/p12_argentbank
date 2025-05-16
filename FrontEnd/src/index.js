@@ -7,6 +7,10 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "./redux/store";
 import "./styles/main.scss";
 import App from "./App";
+//la configuration prencipale pour qu'il fonction correctement 
+//configuration de stor
+//persister les donner 
+//appelle fichier app
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

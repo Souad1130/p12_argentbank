@@ -1,4 +1,4 @@
-// Mock data accounts for profile page
+// les donner qui j'ai afficher dans la page profile
 export const accounts = [
     
         

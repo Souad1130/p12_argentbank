@@ -2,6 +2,7 @@
 * Async function that sending a POST request to the server with email and password and if valid get token 
 
 */
+//fonction pour c'identefier pour recuperer le token
 export const userSignIn = async (email, password) => {
     try {
         const response = await fetch("http://localhost:3001/api/v1/user/login", {
@@ -20,8 +21,11 @@ export const userSignIn = async (email, password) => {
 };
 
 /**
-* Async function that fetch the user profile with a POST request to the server with the token
+* // Fonction asynchrone qui récupère le profil de l'utilisateur avec une requête POST vers le serveur,
+//  en utilisant le token
+
 */
+//utilise token pour recuperer les donner de l'utilisateur 
 export const getProfil = async (token) => {
     const headers = { Authorization: `Bearer ${token}` };
 
@@ -38,8 +42,10 @@ export const getProfil = async (token) => {
 };
 
 /**
-* Async function that updates user first name and last name with PUT request to the server with token
+* // Fonction asynchrone qui met à jour le prénom et le nom de l'utilisateur avec une requête PUT vers le serveur,
+//  en utilisant le token
 */
+//pour changer le nom d'utilisateur 
 export const editProfil = async (token, firstName, lastName) => {
     const config = {
         method: "PUT",

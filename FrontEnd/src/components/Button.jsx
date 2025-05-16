@@ -1,7 +1,7 @@
 
 
 /**
- * Component displaying button.
+ * Component fonctionnement button.
  
  */
 const Button = ({ btnStyle, label, onClick }) => {
